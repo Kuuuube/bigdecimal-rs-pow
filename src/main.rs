@@ -4,10 +4,16 @@ use std::str::FromStr;
 fn main() {
     //1.23456789^2.55  (round 50 before starting calculations, precision 50 in the root loop)
     println!("{}", bigdecimal_powf(&BigDecimal::from_str("1.23456789").unwrap(), &BigDecimal::from_str("2.55").unwrap(), Some(50), Some(50)));
+    //1.23456789^2.55  (no rounding or precision limits)
+    println!("{}", bigdecimal_powf(&BigDecimal::from_str("1.23456789").unwrap(), &BigDecimal::from_str("2.55").unwrap(), None, None));
+
     //123^2
     println!("{}", bigdecimal_powi(&BigDecimal::from_str("123").unwrap(), &BigDecimal::from_str("2").unwrap()));
+
     //322nd root of 2  (precision 50 in the root loop)
     println!("{}", bigdecimal_root(&BigDecimal::from_str("322").unwrap(), &BigDecimal::from_str("2").unwrap(), Some(50)));
+    //322nd root of 2 (no precision limit)
+    println!("{}", bigdecimal_root(&BigDecimal::from_str("322").unwrap(), &BigDecimal::from_str("2").unwrap(), None));
 }
 
 //calculates integer and decimal bigdecimal powers powers
