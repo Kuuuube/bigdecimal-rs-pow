@@ -6,7 +6,7 @@ Code snippets for power and root operations on bigdecimal types.
 
 ### Only use this code if you need something that works **NOT** something highly performant or "bulletproof"
 
-I do not understand the math this is doing and cannot vouch for its efficiency in any way. Portions of the algorithm I came up with myself I also cannot guarantee will function efficiently or performantly.
+I do not understand/have not reviewed most of the math done with this algorithm and cannot vouch for its efficiency in any way. Portions of the algorithm I came up with myself I also cannot guarantee will function efficiently or performantly.
 
 There may be unforseen ways this code could break.
 
